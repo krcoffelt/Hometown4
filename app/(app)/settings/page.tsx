@@ -64,10 +64,10 @@ export default function SettingsPage() {
         <Card>
           <CardHeader>
             <CardTitle>Account & Notifications</CardTitle>
-            <CardDescription>Auth and notification channels are intentionally placeholder modules.</CardDescription>
+            <CardDescription>Auth is env-configured. Notification channels remain placeholders.</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-muted-foreground">Connect authentication, email, and push channels when integrating backend services.</p>
+            <p className="text-sm text-muted-foreground">Connect email and push delivery services when integrating backend notifications.</p>
           </CardContent>
         </Card>
       </section>

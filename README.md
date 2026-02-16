@@ -35,6 +35,20 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Login
+
+This app uses simple env-based login credentials with a session cookie.
+
+Set in `.env.local`:
+
+```bash
+AUTH_EMAIL=you@example.com
+AUTH_PASSWORD=your-password
+AUTH_SESSION_TOKEN=your-long-random-token
+```
+
+Then sign in at `/login`.
+
 ## Build Checks
 
 ```bash
