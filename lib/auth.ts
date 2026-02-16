@@ -2,15 +2,15 @@ export const SESSION_COOKIE_NAME = "crm_session";
 
 export function getAuthConfig() {
   return {
-    email: process.env.AUTH_EMAIL ?? "owner@example.com",
-    password: process.env.AUTH_PASSWORD ?? "change-me",
+    email: process.env.AUTH_EMAIL ?? "krcoffelt@gmail.com",
+    password: process.env.AUTH_PASSWORD ?? "Bvstars_1995",
     sessionToken: process.env.AUTH_SESSION_TOKEN ?? "local-dev-session-token"
   };
 }
 
 export function isValidCredentials(email: string, password: string) {
   const config = getAuthConfig();
-  return email === config.email && password === config.password;
+  return email.trim().toLowerCase() === config.email.trim().toLowerCase() && password === config.password;
 }
 
 export function isValidSessionToken(token?: string) {
