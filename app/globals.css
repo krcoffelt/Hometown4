@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 33% 98%;
+    --foreground: 220 30% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 14%;
+    --primary: 201 92% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 36% 92%;
+    --secondary-foreground: 220 30% 20%;
+    --muted: 210 24% 95%;
+    --muted-foreground: 215 16% 42%;
+    --accent: 31 92% 55%;
+    --accent-foreground: 220 30% 14%;
+    --border: 214 24% 87%;
+    --input: 214 24% 87%;
+    --ring: 201 92% 42%;
+    --success: 158 64% 34%;
+    --success-foreground: 0 0% 100%;
+    --warning: 30 90% 45%;
+    --warning-foreground: 0 0% 100%;
+    --danger: 5 77% 48%;
+    --danger-foreground: 0 0% 100%;
+    --chart-1: 201 92% 42%;
+    --chart-2: 158 64% 34%;
+    --chart-3: 30 90% 45%;
+    --chart-4: 346 77% 46%;
+    --chart-5: 252 75% 58%;
+    --radius-xl: 1rem;
+    --radius-lg: 0.85rem;
+    --radius-md: 0.65rem;
+    --radius-sm: 0.45rem;
+    --shadow-soft: 0 8px 26px rgba(18, 38, 63, 0.08);
+    --shadow-glow: 0 12px 35px rgba(13, 107, 178, 0.25);
+  }
+
+  .dark {
+    --background: 216 27% 9%;
+    --foreground: 212 30% 96%;
+    --card: 219 25% 13%;
+    --card-foreground: 210 25% 96%;
+    --primary: 194 100% 61%;
+    --primary-foreground: 220 30% 10%;
+    --secondary: 217 19% 21%;
+    --secondary-foreground: 210 25% 95%;
+    --muted: 217 19% 17%;
+    --muted-foreground: 215 14% 76%;
+    --accent: 37 95% 62%;
+    --accent-foreground: 220 30% 12%;
+    --border: 219 16% 26%;
+    --input: 219 16% 26%;
+    --ring: 194 100% 61%;
+    --success: 158 64% 48%;
+    --success-foreground: 220 30% 10%;
+    --warning: 39 94% 57%;
+    --warning-foreground: 220 30% 10%;
+    --danger: 7 90% 65%;
+    --danger-foreground: 220 30% 10%;
+    --chart-1: 194 100% 61%;
+    --chart-2: 164 76% 50%;
+    --chart-3: 40 97% 60%;
+    --chart-4: 346 88% 66%;
+    --chart-5: 248 95% 74%;
+    --shadow-soft: 0 10px 28px rgba(3, 7, 17, 0.45);
+    --shadow-glow: 0 16px 44px rgba(56, 189, 248, 0.24);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+    background-image:
+      radial-gradient(circle at 8% 0%, rgba(7, 188, 244, 0.13), transparent 26%),
+      radial-gradient(circle at 92% 20%, rgba(255, 165, 52, 0.11), transparent 25%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 20%);
+    min-height: 100vh;
+  }
+
+  .dark body {
+    background-image:
+      radial-gradient(circle at 8% 0%, rgba(56, 189, 248, 0.12), transparent 24%),
+      radial-gradient(circle at 92% 20%, rgba(251, 191, 36, 0.08), transparent 24%),
+      linear-gradient(180deg, rgba(18, 25, 43, 0.25), transparent 18%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Sora", "Manrope", "Avenir Next", sans-serif;
+  }
+}
+
+@layer utilities {
+  .surface {
+    @apply rounded-xl border border-border/70 bg-card/95 shadow-soft backdrop-blur;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background;
+  }
+}
