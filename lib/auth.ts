@@ -3,7 +3,7 @@ export const SESSION_COOKIE_NAME = "crm_session";
 export function getAuthConfig() {
   return {
     email: process.env.AUTH_EMAIL ?? "krcoffelt@gmail.com",
-    password: process.env.AUTH_PASSWORD ?? "Bvstars_1995",
+    password: process.env.AUTH_PASSWORD ?? "hometown",
     sessionToken: process.env.AUTH_SESSION_TOKEN ?? "local-dev-session-token"
   };
 }
